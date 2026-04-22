@@ -1,8 +1,16 @@
 # Data Warehouse (SQL Server)
 
-A practical Medallion-style Data Warehouse implementation using SQL Server and CSV source files.
+Production-style Medallion architecture project for analytics engineering.
 
-This project ingests raw CRM and ERP data into a Bronze layer, standardizes and cleans it in a Silver layer, and exposes business-ready dimensional analytics models in the Gold layer.
+This repository demonstrates how to ingest raw CRM and ERP CSV data into SQL Server, transform and standardize it through Bronze and Silver layers, and publish analytics-ready Gold views for reporting.
+
+## Quick Highlights
+
+- End-to-end Medallion pipeline: Bronze -> Silver -> Gold
+- Source systems: CRM and ERP CSV datasets
+- Gold star-schema style outputs: dimensions + fact
+- Quality validation scripts for Silver and Gold layers
+- GitHub-friendly documentation and architecture visual
 
 ## Table of Contents
 
@@ -18,6 +26,7 @@ This project ingests raw CRM and ERP data into a Bronze layer, standardizes and 
 - [Documentation](#documentation)
 - [Troubleshooting](#troubleshooting)
 - [Future Improvements](#future-improvements)
+- [Visual Assets Setup](#visual-assets-setup)
 
 ## Project Overview
 
@@ -28,6 +37,25 @@ The objective of this project is to build a clean and maintainable warehouse pip
 3. Gold: publish star-schema-style business views.
 
 The project is designed for repeatable development execution (drop/recreate database, reload, validate).
+
+## ETL Workflow Visual
+
+This section is intentionally designed to match a visual README style for GitHub.
+
+The pipeline follows this exact transformation path:
+
+1. Source: CRM and ERP files
+2. Transform: cleansing, standardization, conformance
+3. Target: analytics-ready Gold views
+
+Add your screenshot image here (recommended file name):
+
+![ETL Workflow](docs/images/etl-workflow.png)
+
+You can also add additional screenshots for:
+
+![Silver Transform](docs/images/silver-transform.png)
+![Gold Model](docs/images/gold-model.png)
 
 ## Architecture
 
@@ -118,7 +146,11 @@ flowchart LR
 │       └── PX_CAT_G1V2.csv
 ├── docs/
 │   ├── data_catalog.md
-│   └── naming_conventions.md
+│   ├── naming_conventions.md
+│   └── images/
+│       ├── etl-workflow.png
+│       ├── silver-transform.png
+│       └── gold-model.png
 ├── scripts/
 │   ├── init_database.sql
 │   ├── bronze/
@@ -267,6 +299,19 @@ Examples implemented in Silver:
 
 - Naming conventions: [docs/naming_conventions.md](docs/naming_conventions.md)
 - Gold data catalog: [docs/data_catalog.md](docs/data_catalog.md)
+
+## Visual Assets Setup
+
+To render screenshots in GitHub README:
+
+1. Put image files under `docs/images/`.
+2. Keep names aligned with the references in this README:
+  - `etl-workflow.png`
+  - `silver-transform.png`
+  - `gold-model.png`
+3. Commit and push again.
+
+If you use different filenames, update the image links in the ETL Workflow Visual section.
 
 ## Troubleshooting
 

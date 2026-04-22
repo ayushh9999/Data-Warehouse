@@ -23,3 +23,11 @@ Thumbs.db
 *.csv
 *.png
 *.pdf
+
+# Allow README/documentation visuals inside docs/images
+!docs/images/
+!docs/images/*.png
+!docs/images/*.jpg
+!docs/images/*.jpeg
+!docs/images/*.gif
+!docs/images/*.webp
