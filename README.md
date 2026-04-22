@@ -26,7 +26,6 @@ This repository demonstrates how to ingest raw CRM and ERP CSV data into SQL Ser
 - [Documentation](#documentation)
 - [Troubleshooting](#troubleshooting)
 - [Future Improvements](#future-improvements)
-- [Visual Assets Setup](#visual-assets-setup)
 
 ## Project Overview
 
@@ -40,22 +39,27 @@ The project is designed for repeatable development execution (drop/recreate data
 
 ## ETL Workflow Visual
 
-This section is intentionally designed to match a visual README style for GitHub.
+This is the actual project workflow using your provided diagrams.
 
-The pipeline follows this exact transformation path:
+### 1) End-to-End Medallion Overview
 
-1. Source: CRM and ERP files
-2. Transform: cleansing, standardization, conformance
-3. Target: analytics-ready Gold views
+![Data Architecture](docs/data_architecture.png)
 
-Add your screenshot image here (recommended file name):
+### 2) Source to Layer Lineage
 
-![ETL Workflow](docs/images/etl-workflow.png)
+![Data Flow](docs/data_flow.png)
 
-You can also add additional screenshots for:
+### 3) CRM and ERP Integration Mapping
 
-![Silver Transform](docs/images/silver-transform.png)
-![Gold Model](docs/images/gold-model.png)
+![Data Integration](docs/data_integration.png)
+
+### 4) Gold Layer Model (Dimensions and Fact)
+
+![Data Model](docs/data_model.png)
+
+### 5) ETL Methods Reference
+
+![ETL Methods](docs/ETL.png)
 
 ## Architecture
 
@@ -145,12 +149,15 @@ flowchart LR
 │       ├── LOC_A101.csv
 │       └── PX_CAT_G1V2.csv
 ├── docs/
+│   ├── data_architecture.png
+│   ├── data_flow.png
+│   ├── data_integration.png
+│   ├── data_model.png
+│   ├── ETL.png
+│   ├── data_layers.pdf
+│   ├── Project_Notes_Sketches.pdf
 │   ├── data_catalog.md
-│   ├── naming_conventions.md
-│   └── images/
-│       ├── etl-workflow.png
-│       ├── silver-transform.png
-│       └── gold-model.png
+│   └── naming_conventions.md
 ├── scripts/
 │   ├── init_database.sql
 │   ├── bronze/
@@ -299,19 +306,6 @@ Examples implemented in Silver:
 
 - Naming conventions: [docs/naming_conventions.md](docs/naming_conventions.md)
 - Gold data catalog: [docs/data_catalog.md](docs/data_catalog.md)
-
-## Visual Assets Setup
-
-To render screenshots in GitHub README:
-
-1. Put image files under `docs/images/`.
-2. Keep names aligned with the references in this README:
-  - `etl-workflow.png`
-  - `silver-transform.png`
-  - `gold-model.png`
-3. Commit and push again.
-
-If you use different filenames, update the image links in the ETL Workflow Visual section.
 
 ## Troubleshooting
 
