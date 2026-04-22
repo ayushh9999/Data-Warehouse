@@ -1,6 +1,19 @@
-# Data Warehouse (SQL Server)
+<h1 align="center">Data Warehouse (SQL Server)</h1>
 
-Production-style Medallion architecture project for analytics engineering.
+<p align="center">
+  Production-style Medallion Architecture for Analytics Engineering
+</p>
+
+<p align="center">
+  <a href="https://www.microsoft.com/sql-server"><img alt="SQL Server" src="https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white"></a>
+  <img alt="Architecture" src="https://img.shields.io/badge/Architecture-Medallion-2E8B57?style=for-the-badge">
+  <img alt="Model" src="https://img.shields.io/badge/Model-Star%20Schema-1F6FEB?style=for-the-badge">
+  <img alt="Quality" src="https://img.shields.io/badge/Quality-Checks%20Included-6F42C1?style=for-the-badge">
+</p>
+
+<p align="center">
+  <img src="docs/data_architecture.png" alt="Data Warehouse Architecture" width="92%">
+</p>
 
 This repository demonstrates how to ingest raw CRM and ERP CSV data into SQL Server, transform and standardize it through Bronze and Silver layers, and publish analytics-ready Gold views for reporting.
 
@@ -11,6 +24,16 @@ This repository demonstrates how to ingest raw CRM and ERP CSV data into SQL Ser
 - Gold star-schema style outputs: dimensions + fact
 - Quality validation scripts for Silver and Gold layers
 - GitHub-friendly documentation and architecture visual
+
+## Quick Navigation
+
+| What You Want | Go To |
+|---|---|
+| See the full visual pipeline | [ETL Workflow Visual](#etl-workflow-visual) |
+| Understand layer responsibilities | [Architecture](#architecture) |
+| Run the full project quickly | [How to Run](#how-to-run) |
+| Validate data quality | [Data Quality Checks](#data-quality-checks) |
+| Review model and docs | [Documentation](#documentation) |
 
 ## Table of Contents
 
@@ -43,23 +66,33 @@ This is the actual project workflow using your provided diagrams.
 
 ### 1) End-to-End Medallion Overview
 
-![Data Architecture](docs/data_architecture.png)
+<p align="center">
+  <img src="docs/data_architecture.png" alt="Data Architecture" width="96%">
+</p>
 
 ### 2) Source to Layer Lineage
 
-![Data Flow](docs/data_flow.png)
+<p align="center">
+  <img src="docs/data_flow.png" alt="Data Flow" width="96%">
+</p>
 
 ### 3) CRM and ERP Integration Mapping
 
-![Data Integration](docs/data_integration.png)
+<p align="center">
+  <img src="docs/data_integration.png" alt="Data Integration" width="96%">
+</p>
 
 ### 4) Gold Layer Model (Dimensions and Fact)
 
-![Data Model](docs/data_model.png)
+<p align="center">
+  <img src="docs/data_model.png" alt="Data Model" width="96%">
+</p>
 
 ### 5) ETL Methods Reference
 
-![ETL Methods](docs/ETL.png)
+<p align="center">
+  <img src="docs/ETL.png" alt="ETL Methods" width="96%">
+</p>
 
 ## Architecture
 
